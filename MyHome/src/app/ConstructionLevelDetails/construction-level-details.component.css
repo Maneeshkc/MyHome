@@ -1,0 +1,23 @@
+.task-section {
+  background-color: #3a1a5d;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.task-card {
+  background-color: #b98aff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1a0b2e;
+}
+
+.task-header {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.btn-complete {
+  background-color: #4e1c94;
+  color: white;
+}

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { ConstructionLevelSideBarComponent } from './ConstructionLevel/construction-level-side-bar.component';
+import { ConstructionLevelDetailsComponent } from "./ConstructionLevelDetails/construction-level-details.component";
+import { ConstructionLevelSideBarComponent } from "./ConstructionLevelSideBar/construction-level-side-bar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, ConstructionLevelSideBarComponent],
+  imports: [HeaderComponent, ConstructionLevelDetailsComponent, ConstructionLevelSideBarComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
