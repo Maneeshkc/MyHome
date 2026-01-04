@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+ body {
+      background-color: #1a0b2e;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .sidebar {
+      background-color: #2d1543;
+      min-height: 100vh;
+      padding-top: 2rem;
+    }
+    .sidebar .list-group-item {
+      background-color: transparent;
+      color: white;
+      border: none;
+    }
+    .sidebar .list-group-item.active {
+      background-color: #7925d3;
+      border-radius: 0.5rem;
+    }
+    .task-card {
+      background-color: #b98aff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      color: #1a0b2e;
+    }
+    .task-header {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    .top-banner {
+      background: linear-gradient(to right, #4b1d80, #2d1543);
+      padding: 2rem;
+      text-align: center;
+      color: white;
+    }
+    .top-banner h1 {
+      margin-bottom: 0.5rem;
+    }
+    .task-section {
+      background-color: #3a1a5d;
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+    .btn-complete {
+      background-color: #4e1c94;
+      color: white;
+    }
