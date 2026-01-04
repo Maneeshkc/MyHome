@@ -1,0 +1,19 @@
+.top-banner img {
+  display: inline-block;
+}
+
+.top-banner p {
+  margin: 0;
+  color: #6c757d;
+}
+/* ...existing code... */
+.top-banner {
+  background: linear-gradient(to right, #4b1d80, #2d1543);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* ...existing code... */

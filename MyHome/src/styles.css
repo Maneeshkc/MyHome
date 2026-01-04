@@ -29,12 +29,6 @@
       font-weight: bold;
       font-size: 1.3rem;
     }
-    .top-banner {
-      background: linear-gradient(to right, #4b1d80, #2d1543);
-      padding: 2rem;
-      text-align: center;
-      color: white;
-    }
     .top-banner h1 {
       margin-bottom: 0.5rem;
     }
