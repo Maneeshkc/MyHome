@@ -4,20 +4,7 @@
       color: white;
       font-family: 'Segoe UI', sans-serif;
     }
-    .sidebar {
-      background-color: #2d1543;
-      min-height: 100vh;
-      padding-top: 2rem;
-    }
-    .sidebar .list-group-item {
-      background-color: transparent;
-      color: white;
-      border: none;
-    }
-    .sidebar .list-group-item.active {
-      background-color: #7925d3;
-      border-radius: 0.5rem;
-    }
+    /* .sidebar styles moved to ConstructionLevelSideBar component */
     .task-card {
       background-color: #b98aff;
       border-radius: 1rem;
