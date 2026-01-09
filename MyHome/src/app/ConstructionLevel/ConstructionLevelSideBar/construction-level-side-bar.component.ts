@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { ConstructionLevelService } from '../service/ConstructionLevelService';
-import { ConstructionLevelModel } from '../Model/ConstructionLevelModel';
+import { ConstructionLevelDetailsComponent } from "../ConstructionLevelDetails/construction-level-details.component";
+import { ConstructionLevelService } from '../../service/ConstructionLevelService';
+import { ConstructionLevelModel } from '../../Model/ConstructionLevelModel';
 
 @Component({
   selector: 'app-construction-level-side-bar',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, ConstructionLevelDetailsComponent],
   templateUrl: './construction-level-side-bar.component.html',
   styleUrls: ['./construction-level-side-bar.component.css']
 })

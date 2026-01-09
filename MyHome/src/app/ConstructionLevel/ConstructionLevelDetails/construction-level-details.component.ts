@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ConstructionLevelModel } from '../Model/ConstructionLevelModel';
+import { ConstructionLevelModel } from '../../Model/ConstructionLevelModel';
 
 @Component({
   selector: 'app-construction-level-details',

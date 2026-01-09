@@ -1,6 +1,0 @@
-<div class="list-group">
-  <button *ngFor="let level of levels; let i = index" class="list-group-item" [class.active]="i === activeIndex"
-    (click)="setActive($event,level.Id)">
-    <span class="icon-placeholder"></span>{{ level.Tittle }}
-  </button>
-</div>

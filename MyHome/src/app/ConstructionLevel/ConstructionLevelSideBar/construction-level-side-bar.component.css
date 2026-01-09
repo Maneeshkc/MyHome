@@ -1,6 +1,9 @@
 .list-group {
   width: 100%;
 }
+.constriction-level{
+  width: 100%;
+}
 
 .list-group-item {
   background-color: transparent;
@@ -15,6 +18,11 @@
 
 .list-group-item.active {
   background-color: #7925d3;
+  border-radius: 0.5rem;
+}
+
+.list-group-item.new-construction-level {
+  background-color: orange;
   border-radius: 0.5rem;
 }
 
