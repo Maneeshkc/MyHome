@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ConstructionLevelModel } from '../Model/ConstructionLevelModel';
 
 @Component({
   selector: 'app-construction-level-details',
@@ -12,5 +13,5 @@ export class ConstructionLevelDetailsComponent {
 cancelEdit() {
 throw new Error('Method not implemented.');
 }
-level: any;
+level: ConstructionLevelModel=new ConstructionLevelModel();
 }

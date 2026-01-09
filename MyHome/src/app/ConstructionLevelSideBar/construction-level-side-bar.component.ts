@@ -14,13 +14,15 @@ export class ConstructionLevelSideBarComponent implements OnInit {
   levels: ConstructionLevelModel[] = [];
   activeIndex: number = 0;
 
-  constructor(private constructionLevelService: ConstructionLevelService) {}
+  constructor(private constructionLevelService: ConstructionLevelService) { }
 
   ngOnInit(): void {
     this.levels = this.constructionLevelService.getAll();
   }
 
-  setActive(index: number): void {
-    this.activeIndex = index;
+  setActive(event: Event,index: number): void {
+    this.activeIndex = index-1;
+    console.log(this.constructionLevelService.getById(index));
+    console.log(event);
   }
 }
