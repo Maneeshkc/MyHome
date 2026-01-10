@@ -2,11 +2,11 @@
   <div class="col-md-2 p-0">
     <div class="list-group">
       <button *ngFor="let level of levels; let i = index" class="list-group-item" [class.active]="i === activeIndex"
-        (click)="setActive($event,level.Id)">
+        (click)="setActive(i, level.Id)">
         <span class="icon-placeholder"></span>{{ level.Tittle }}
       </button>
       <hr>
-      <button class="list-group-item new-construction-level" >
+      <button (click)="setActive(-1, -1)" class="list-group-item new-construction-level">
         <span class="icon-placeholder"></span>Add New Level
       </button>
     </div>
@@ -14,6 +14,6 @@
 
   <!-- Main Content -->
   <div class="col-md-10 p-4">
-    <app-construction-level-details></app-construction-level-details>
+    <app-construction-level-details [levelId]="selectedLevelId"></app-construction-level-details>
   </div>
 </div>

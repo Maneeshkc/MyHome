@@ -1,3 +1,14 @@
+@if(levelId==0)
+{
+<div class="task-section">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Construction Level</h2>
+  </div>
+  <p>Please select a construction level from the sidebar to view or edit its details.</p>
+</div>
+}
+@else
+{
 <div class="task-section">
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Edit Construction Level</h2>
@@ -12,8 +23,9 @@
       <textarea id="levelDescription" class="form-control" [(ngModel)]="level.Description" name="description" rows="3"
         required></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-primary" (click)="addEdit()">Save</button>
     <button type="button" class="btn btn-secondary ms-2" (click)="cancelEdit()">Cancel</button>
-    <button type="submit" class="btn btn-danger ms-2">Delete</button>
+    <button type="submit" class="btn btn-danger ms-2" (click)="delete()">Delete</button>
   </form>
 </div>
+}

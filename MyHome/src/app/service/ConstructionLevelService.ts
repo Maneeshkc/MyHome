@@ -41,4 +41,17 @@ export class ConstructionLevelService {
     }
     return false;
   }
+
+  add(newLevel: ConstructionLevelModel): void {
+    const newId = this.levels.length > 0 ? Math.max(...this.levels.map(l => l.Id)) + 1 : 1;
+    newLevel.Id = newId;
+    this.levels.push(newLevel);
+  }
+
+  remove(id: number) {
+    const index = this.levels.findIndex(level => level.Id === id);
+    if (index !== -1) {
+      this.levels.splice(index, 1);
+    }
+  }
 }

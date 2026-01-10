@@ -14,6 +14,7 @@ import { ConstructionLevelModel } from '../../Model/ConstructionLevelModel';
 export class ConstructionLevelSideBarComponent implements OnInit {
   levels: ConstructionLevelModel[] = [];
   activeIndex: number = 0;
+  selectedLevelId: number = 0;
 
   constructor(private constructionLevelService: ConstructionLevelService) { }
 
@@ -21,9 +22,8 @@ export class ConstructionLevelSideBarComponent implements OnInit {
     this.levels = this.constructionLevelService.getAll();
   }
 
-  setActive(event: Event,index: number): void {
-    this.activeIndex = index-1;
-    console.log(this.constructionLevelService.getById(index));
-    console.log(event);
+  setActive(index:number,levelId: number): void {
+    this.activeIndex = index;
+    this.selectedLevelId = levelId;
   }
 }
