@@ -26,6 +26,16 @@
   border-radius: 0.5rem;
 }
 
+.list-group-item.Dashboard {
+  background-color: green;
+  border-radius: 0.5rem;
+}
+.cLevelList{
+  flex-grow: 1;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
 .icon-placeholder {
   display: inline-block;
   width: 1.5em;
@@ -33,6 +43,7 @@
   margin-right: 0.75em;
   vertical-align: middle;
 }
+
 
 :host {
   display: flex;

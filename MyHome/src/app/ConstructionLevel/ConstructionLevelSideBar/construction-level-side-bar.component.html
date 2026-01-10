@@ -1,19 +1,38 @@
 <div class="row constriction-level">
   <div class="col-md-2 p-0">
     <div class="list-group">
-      <button *ngFor="let level of levels; let i = index" class="list-group-item" [class.active]="i === activeIndex"
-        (click)="setActive(i, level.Id)">
-        <span class="icon-placeholder"></span>{{ level.Tittle }}
+      <button (click)="selectDashboard()" class="list-group-item Dashboard">
+        <span class="icon-placeholder"></span>Dashboard
       </button>
+      <hr>
+      <div class="cLevelList">
+        <button *ngFor="let level of levels; let i = index" class="list-group-item" [class.active]="i === activeIndex"
+          (click)="setActive(i, level.Id)">
+          <span class="icon-placeholder"></span>{{ level.Tittle }}
+        </button>
+      </div>
+
       <hr>
       <button (click)="setActive(-1, -1)" class="list-group-item new-construction-level">
         <span class="icon-placeholder"></span>Add New Level
       </button>
     </div>
   </div>
-
+  @if(dashboardSelected == false)
+  {
   <!-- Main Content -->
   <div class="col-md-10 p-4">
-    <app-construction-level-details [levelId]="selectedLevelId"></app-construction-level-details>
+    <app-construction-level-details (deleteLevel)="levelDeleted($event)"
+      [levelId]="selectedLevelId"></app-construction-level-details>
   </div>
+  }
+  @else
+  {
+  <div class="col-md-10 p-4">
+    <h2>Dashboard Content Here</h2>
+    <p>This is where the dashboard content will be displayed.</p>
+    <app-construction-dashboard></app-construction-dashboard>
+  </div>
+  }
+
 </div>

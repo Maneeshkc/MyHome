@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ConstructionLevelModel } from '../../Model/ConstructionLevelModel';
 import { ConstructionLevelService } from '../../service/ConstructionLevelService';
@@ -12,6 +12,7 @@ import { ConstructionLevelService } from '../../service/ConstructionLevelService
 })
 export class ConstructionLevelDetailsComponent implements OnChanges {
   @Input({ required: true }) levelId: number = 0;
+  @Output() deleteLevel = new EventEmitter<string>();
   level: ConstructionLevelModel = new ConstructionLevelModel();
 
   constructor(private constuctinLevelService: ConstructionLevelService) {
@@ -19,7 +20,8 @@ export class ConstructionLevelDetailsComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     console.log('Level ID changed to:', this.levelId);
     if (this.levelId > 0) {
-      this.level = this.constuctinLevelService.getById(this.levelId)!;
+      let leveltemp=this.constuctinLevelService.getById(this.levelId)!;
+      this.level = { ...leveltemp };
     }
     else if(this.levelId === -1){
       this.level = new ConstructionLevelModel();
@@ -38,12 +40,12 @@ export class ConstructionLevelDetailsComponent implements OnChanges {
     if (this.levelId > 0) {
       this.constuctinLevelService.deleteById(this.levelId);
       this.level = new ConstructionLevelModel();
+      this.deleteLevel.emit('deleted');
     }
   }
 
 
   cancelEdit() {
-    // this.levelId = 0;
-    //   this.level = new ConstructionLevelModel();
+     this.deleteLevel.emit('calcelled');
   }
 }
