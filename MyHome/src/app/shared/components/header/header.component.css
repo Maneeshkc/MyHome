@@ -15,4 +15,7 @@
   top: 0;
   z-index: 1000;
 }
+.nav-link {
+  color: white;
+}
 /* ...existing code... */

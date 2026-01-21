@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { ManageConstructionLevelComponent } from "./ConstructionLevel/manage-construction-level/manage-construction-level.component";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, ManageConstructionLevelComponent],
+  imports: [HeaderComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

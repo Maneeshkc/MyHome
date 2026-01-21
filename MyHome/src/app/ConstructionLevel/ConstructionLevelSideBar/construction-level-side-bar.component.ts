@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { RouterLink } from "@angular/router";
+
 import { ConstructionLevelDetailsComponent } from "../ConstructionLevelDetails/construction-level-details.component";
 import { ConstructionLevelService } from '../../service/ConstructionLevelService';
 import { ConstructionLevelModel } from '../../Model/ConstructionLevelModel';
@@ -8,7 +10,7 @@ import { ConstructionDashboardComponent } from "../construction-dashboard/constr
 @Component({
   selector: 'app-construction-level-side-bar',
   standalone: true,
-  imports: [NgFor, ConstructionLevelDetailsComponent, ConstructionDashboardComponent],
+  imports: [NgFor, ConstructionLevelDetailsComponent, ConstructionDashboardComponent, RouterLink],
   templateUrl: './construction-level-side-bar.component.html',
   styleUrls: ['./construction-level-side-bar.component.css']
 })
@@ -38,9 +40,5 @@ export class ConstructionLevelSideBarComponent implements OnInit {
       this.activeIndex = -1;
       this.selectedLevelId = 0;
     }
-  }
-
-  selectDashboard(): void {
-    this.dashboardSelected = true;
   }
 }
